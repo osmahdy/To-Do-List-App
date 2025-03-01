@@ -33,12 +33,22 @@ body {
 html {
   scroll-behavior: smooth;
 }
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
 ul {
   list-style: none;
 }
 .app {
   width: 600px;
   margin: 50px auto;
+}
+@media (max-width: 667px) {
+  .app {
+    width: 380px;
+  }
 }
 .app .title {
   display: block;
@@ -68,7 +78,7 @@ ul {
 .app .add-section button {
   width: 13%;
   padding: 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   border: 0;
   background-color: #7b68ee;
@@ -78,6 +88,15 @@ ul {
   margin-left: 5px;
   position: relative;
   transition: 0.5s;
+}
+@media (max-width: 667px) {
+  .app .add-section button {
+    width: 17%;
+    font-size: 15px;
+  }
+  .app .add-section input {
+    width: 60%;
+  }
 }
 
 .app .add-section button.del:after {
@@ -148,6 +167,14 @@ ul {
   border-radius: 10px;
   cursor: pointer;
   margin-left: 5px;
+}
+@media (max-width: 667px) {
+  .app .list-section .note .text {
+    width: 78%;
+  }
+  .app .list-section .note button {
+    width: 20%;
+  }
 }
 
 footer {
